@@ -28,6 +28,7 @@ func (this *CommonFixture) TestServiceAndRegion() {
 	this.So(this.serviceAndRegion("s3.amazonaws.com"), should.Resemble, []string{"s3", "us-east-1"})
 	this.So(this.serviceAndRegion("s3-us-west-1.amazonaws.com"), should.Resemble, []string{"s3", "us-west-1"})
 	this.So(this.serviceAndRegion("s3-external-1.amazonaws.com"), should.Resemble, []string{"s3", "us-east-1"})
+	this.So(this.serviceAndRegion("myapi.execute-api.us-west-1.amazonaws.com"), should.Resemble, []string{"execute-api", "us-west-1"})
 }
 
 func (this *CommonFixture) TestHashFunctions() {
